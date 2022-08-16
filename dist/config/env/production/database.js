@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.default = ({ env }) => ({
     connection: {
-        client: "pg",
+        client: "postgres",
         connection: {
             host: env("DATABASE_HOST"),
             port: env.int("DATABASE_PORT"),
