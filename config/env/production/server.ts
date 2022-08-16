@@ -1,4 +1,7 @@
-module.exports = ({ env }) => ({
-  url: process.env.MY_HEROKU_URL,
-  port: process.env.PORT,
+export default ({ env }) => ({
+  proxy: true,
+  url: env("APP_URL"), // replaces `host` and `port` properties in the development environment
+  app: {
+    keys: env.array("APP_KEYS"),
+  },
 });
